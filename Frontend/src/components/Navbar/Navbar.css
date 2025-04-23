@@ -7,11 +7,13 @@
 .navbar .logo{
     width: 150px;
 }
+.navbar .logo img{
+    background-color: white;
+}
 .navbar-menu{
     display: flex;
     list-style: none;
     gap: 20px;
-    color: #49557e;
     font-size: 18px;
 }
 .navbar-right{

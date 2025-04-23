@@ -23,13 +23,11 @@ const Cart = () => {
         <hr />
         {food_list.map((item) => {
           if (cartItems[item._id] > 0) {
-            console.log(item.image); // Check the image path
             return (
               <div key={item._id} className="cart-items-title cart-items-item">
                 <img
-                  src={item.image}
+                  src={`http://localhost:4000/images/${item.image}`}
                   alt={item.name}
-                  onError={() => console.log("Image failed to load")}
                 />
                 <p>{item.name}</p>
                 <p>${item.price}</p>
@@ -42,7 +40,7 @@ const Cart = () => {
               </div>
             );
           }
-          return null; // Ensure to return null if the condition is not met
+          return null; // Explicit return for items not in cart
         })}
       </div>
       <div className="cart-bottom">
@@ -69,15 +67,6 @@ const Cart = () => {
           <button onClick={() => navigate("/order")}>
             PROCEED TO CHECKOUT
           </button>
-        </div>
-        <div className="cart-promocode">
-          <div>
-            <p>If you have a promo code, Enter it here</p>
-            <div className="cart-promocode-input">
-              <input type="text" placeholder="Promo code" />
-              <button>Submit</button>
-            </div>
-          </div>
         </div>
       </div>
     </div>

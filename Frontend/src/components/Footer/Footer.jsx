@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='footer-content'>
             <div className='footer-content-left'>
                  <img src={assets.logo} alt='' />
-                 <p>it is a restaurent and bar where everyone are served with delicious meal</p>
+                 <p>It is a restaurant where everyone are served with delicious meal</p>
                  <div className='footer-social-icon'>
                     <img src={assets.facebook_icon} alt='' />
                     <img src={assets.twitter_icon} alt='' />
@@ -26,16 +26,16 @@ const Footer = () => {
                 
             </div>
             <div className='footer-content-right'>
-                <h2>GET IN TOUCH</h2>
+                <h2>CONTACT US</h2>
                 <ul>
                     <li>+251952212209</li>
-                    <li>wandut1998@gmail.com</li>
+                    <li>gownaath@gmail.com</li>
                 </ul>
                 
             </div>
         </div>
          <hr/>
-         <p className="footer-copyright">Copyright 2025 &copy; Wandut.com-All Right Reserved</p>
+         <p className="footer-copyright">Copyright 2025 &copy; Gow Naath-All Right Reserved: Devoloped by Engineer Ganun</p>
     </div>
   )
 }

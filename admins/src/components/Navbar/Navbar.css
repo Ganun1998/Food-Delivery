@@ -2,11 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 4%;
+    padding: 6px 2%;
+    background-color: rgb(7, 26, 26);
+}
+.navbar h1{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .navbar .logo{
-    width: max(10%,80px);
+    width: max(10%,60px);
 }
 .navbar .profile{
     width: 40px;
