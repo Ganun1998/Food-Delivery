@@ -12,7 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AdminDashboard = () => {
-  const url = 'http://localhost:4000';
+  const url = 'https://food-delivery-backend2-g4x2.onrender.com';
 
   return (
     <div>
