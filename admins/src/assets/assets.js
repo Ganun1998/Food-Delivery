@@ -6,7 +6,7 @@ import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.png'
 import dashboard_icon from './dashboard_icon.png'
 import photo from './photo.png'
-
+export const url = 'https://food-delivery-backend2-g4x2.onrender.com'
 export const assets ={
     logo,
     add_icon,
@@ -18,4 +18,3 @@ export const assets ={
     photo
 }
 
-export const url = 'http://localhost:4000'
