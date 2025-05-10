@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Eye } from "lucide-react";
+import { Trash } from "lucide-react"; // Import Trash icon
 import axios from "axios";
 import { toast } from "react-toastify";
 import './Orders.css'; // Import your CSS file
@@ -45,6 +45,20 @@ const OrdersTable = ({ url }) => {
         }
     };
 
+    const removeOrder = async (orderId) => {
+        try {
+            const response = await axios.post(`${url}/api/order/remove`,{id:orderId}); // Use DELETE method
+            if (response.data.success) {
+                toast.success("Order removed successfully");
+                await fetchAllOrders(); // Refresh the order list
+            } else {
+                toast.error("Failed to remove order");
+            }
+        } catch (error) {
+            toast.error("Error deleting order");
+        }
+    };
+
     useEffect(() => {
         fetchAllOrders();
     }, []);
@@ -56,7 +70,7 @@ const OrdersTable = ({ url }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
         >
-        <h2>Order List</h2>
+            <h2>Order List</h2>
 
             <div className="overflow-x-auto">
                 <table className="table">
@@ -68,7 +82,6 @@ const OrdersTable = ({ url }) => {
                             <th className="th">Phone</th>
                             <th className="th">Total</th>
                             <th className="th">Status</th>
-                            <th className="th">Date</th>
                             <th className="th">Actions</th>
                         </tr>
                     </thead>
@@ -101,10 +114,9 @@ const OrdersTable = ({ url }) => {
                                         <option value="Delivered">Delivered</option>
                                     </select>
                                 </td>
-                                <td className="td">{new Date(order.createdAt).toLocaleDateString()}</td>
                                 <td className="td">
-                                    <button className="button">
-                                        <Eye size={18} />
+                                    <button className="button" onClick={() => removeOrder(order._id)}>
+                                        <Trash size={18} />
                                     </button>
                                 </td>
                             </motion.tr>

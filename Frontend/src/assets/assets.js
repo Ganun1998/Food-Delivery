@@ -86,7 +86,7 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
+        menu_name: "Kisera",
         menu_image: menu_1
     },
     {
@@ -94,7 +94,7 @@ export const menu_list = [
         menu_image: menu_2
     },
     {
-        menu_name: "Deserts",
+        menu_name: "Asida",
         menu_image: menu_3
     },
     {
@@ -106,7 +106,7 @@ export const menu_list = [
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        menu_name: "Chapati",
         menu_image: menu_6
     },
     {
@@ -114,7 +114,7 @@ export const menu_list = [
         menu_image: menu_7
     },
     {
-        menu_name: "Noodles",
+        menu_name: "Walwal",
         menu_image: menu_8
     }]
 
@@ -182,7 +182,7 @@ export const food_list = [
         name: "Ripple Ice Cream",
         image: food_9,
         price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "Food gives us essential nutrients for our health and well-being",
         category: "Deserts"
        }, {
         _id: "10",

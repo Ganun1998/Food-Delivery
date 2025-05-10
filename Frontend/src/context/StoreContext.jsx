@@ -48,10 +48,19 @@ const StoreContextProvider = (props) => {
   };
 
   const loadCartData = async (token) => {
-    const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
-    setCartItems(response.data.cartData);
+    try {
+      const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
+      console.log("Response from cart get:", response.data);
+      if (response.data.cartData) {
+        setCartItems(response.data.cartData);
+      } else {
+        console.warn("Cart data is not available");
+        setCartItems({});
+      }
+    } catch (error) {
+      console.error("Error loading cart data:", error);
+    }
   };
-
   useEffect(() => {
     async function loadData() {
       await fetchFoodList();
