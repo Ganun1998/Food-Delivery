@@ -7,7 +7,6 @@ import userRouter from './routes/userRoute.js'
 import cartRouter from './routes/cartRoute.js';
 import 'dotenv/config'
 import orderRouter from './routes/orderRoute.js';
-import bcrypt from 'bcryptjs';
 
 // app config
 const app = express();
